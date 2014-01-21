@@ -1,0 +1,34 @@
+<div id="header"><h1>Show Friend biology</h1></div>
+<div id="wamper">
+<span id="btn_addnew"><%= link_to '<button>Add new</button>'.html_safe, new_friend_path%></span>
+	<div id="content_one">
+		<% index = 1%>
+		<% @friend.each do |frie|%>
+			<% if index == 1 %>
+			<div class="right">
+				<!-- <img src= <%= image_path(frie.photo)%>/> -->
+				<%= link_to image_tag(frie.photo),biology_path(frie)%>
+				<p><%= link_to "#{frie.fname} #{frie.lname}", biology_path(frie)%></p>
+
+			</div>
+			<% elsif index == 2%>
+			<div class="center">
+					<%= link_to image_tag(frie.photo),biology_path(frie)%>
+					<p><%= link_to "#{frie.fname} #{frie.lname}", biology_path(frie)%></p>
+			</div>
+			<% else %>
+			<div class="left">
+					<%= link_to image_tag(frie.photo),biology_path(frie)%>
+					<p><%= link_to "#{frie.fname} #{frie.lname}", biology_path(frie)%></p>
+
+		    </div>
+			<% end %>
+			<% if index < 3%>
+				<% index = index + 1%>
+			<% else %>
+				<% index = 1 %>
+			<% end %>
+		<% end %>
+	</div>
+	
+</div>

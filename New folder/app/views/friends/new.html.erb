@@ -1,0 +1,30 @@
+<div class="warm_form">
+ <%= form_for(@friend) do |f|%>
+   <table>
+	 	<tr>
+			<td><p><%= f.label :FristName%></td>
+			<td><%= f.text_field :fname%></p></td>
+	    </tr>
+		<tr>
+			<td><p><%= f.label :LastName%></td>
+		    <td><%= f.text_field :lname%></p></td>
+		 </tr>
+		<tr>
+			<td><p><%= f.label :Age%></td>
+		    <td><%= f.text_field :age%></p></td>
+	    </tr>
+		<tr>
+			<td><p><%= f.label :Sex%></td>
+		    <td><%= f.text_field :sex%></p></td>
+	    </tr>
+	    <tr>
+		    <td><p><%= f.label :Photo%></td>
+		    <td><%= f.text_field :photo%></p></td>
+	    </tr>
+        <tr>
+		    </td></td>
+			<td><%= f.submit%></td>
+         </tr>
+    </table>
+<% end %>
+</div>
